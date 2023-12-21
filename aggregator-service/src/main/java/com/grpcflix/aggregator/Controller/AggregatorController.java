@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 public class AggregatorController {
 
+    //Field level Dependency Injection
     @Autowired
     private UserMovieService userMovieService;
 
@@ -22,7 +23,7 @@ public class AggregatorController {
     }
 
 
-    @PutMapping
+    @PutMapping("/users")
     public void setUserGenre(@RequestBody UserGenre userGenre){
 
         this.userMovieService.setUserGenre(userGenre);

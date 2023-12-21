@@ -7,10 +7,11 @@ import com.xNARA.grpcflix.user.UserResponse;
 import com.xNARA.grpcflix.user.UserSearchRequest;
 import com.xNARA.grpcflix.user.UserServiceGrpc;
 import io.grpc.stub.StreamObserver;
+import jakarta.transaction.Transactional;
+import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.transaction.Transactional;
-
+@GrpcService
 public class UserService extends UserServiceGrpc.UserServiceImplBase {
 
     @Autowired
